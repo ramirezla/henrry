@@ -1,0 +1,206 @@
+[ramirezla@LXMOBILELARG ~]$ git config --list
+user.email==
+user.name=Luis A, Ramirez G.
+user.name==
+core.autocrlf=input
+cola.spellcheck=false
+cola.startupmode=folder
+credential.helper=store --file ~/.my-credentials
+[ramirezla@LXMOBILELARG ~]$ cd prueba
+prueba_github/ pruebaHenrry/  
+[ramirezla@LXMOBILELARG ~]$ cd pruebaHenrry/
+[ramirezla@LXMOBILELARG pruebaHenrry]$ ls
+correo.txt  henrry
+[ramirezla@LXMOBILELARG pruebaHenrry]$ ls -las
+total 16
+ 0 drwxrwxr-x    4 ramirezla ramirezla   50 Jan 27 23:17 .
+12 drwx------. 111 ramirezla ramirezla 8192 Jan 28 01:30 ..
+ 4 -rw-rw-r--    1 ramirezla ramirezla   31 Jan 27 23:14 correo.txt
+ 0 drwxrwxr-x    8 ramirezla ramirezla  166 Jan 27 23:20 .git
+ 0 drwxrwxr-x    3 ramirezla ramirezla   35 Jan 27 23:11 henrry
+[ramirezla@LXMOBILELARG pruebaHenrry]$ git log
+commit adf47ac281f831be6692612f2f9186d05bdbf23d
+Author: = <=>
+Date:   Fri Jan 27 23:18:23 2023 -0400
+
+    prueba 1
+[ramirezla@LXMOBILELARG pruebaHenrry]$ git status
+On branch master
+nothing to commit, working tree clean
+[ramirezla@LXMOBILELARG pruebaHenrry]$ git push origin main
+error: src refspec main does not match any.
+error: failed to push some refs to 'https://github.com/ramirezla/henrry.git'
+[ramirezla@LXMOBILELARG pruebaHenrry]$ git config --local user.email "ramirezluisalberto@hotmail.com"
+[ramirezla@LXMOBILELARG pruebaHenrry]$ git config --local user.name "ramirezla"
+[ramirezla@LXMOBILELARG pruebaHenrry]$ git config --local user.password ".Tar1Ba*"
+[ramirezla@LXMOBILELARG pruebaHenrry]$ git remote -v
+origin	https://github.com/ramirezla/henrry.git (fetch)
+origin	https://github.com/ramirezla/henrry.git (push)
+[ramirezla@LXMOBILELARG pruebaHenrry]$ git push origin main
+error: src refspec main does not match any.
+error: failed to push some refs to 'https://github.com/ramirezla/henrry.git'
+[ramirezla@LXMOBILELARG pruebaHenrry]$ git remote add origin https://github.com/ramirezla/henrry.git
+fatal: remote origin already exists.
+[ramirezla@LXMOBILELARG pruebaHenrry]$ git branch
+* master
+[ramirezla@LXMOBILELARG pruebaHenrry]$ git check
+check-mailmap   checkout        
+[ramirezla@LXMOBILELARG pruebaHenrry]$ git check
+check-mailmap   checkout        
+[ramirezla@LXMOBILELARG pruebaHenrry]$ git checkout 
+[ramirezla@LXMOBILELARG pruebaHenrry]$ git remote -v
+origin	https://github.com/ramirezla/henrry.git (fetch)
+origin	https://github.com/ramirezla/henrry.git (push)
+[ramirezla@LXMOBILELARG pruebaHenrry]$ git push origin master
+error: unable to read askpass response from '/usr/libexec/openssh/gnome-ssh-askpass'
+Username for 'https://github.com': ramirezla
+error: unable to read askpass response from '/usr/libexec/openssh/gnome-ssh-askpass'
+Password for 'https://ramirezla@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/ramirezla/henrry.git/'
+[ramirezla@LXMOBILELARG pruebaHenrry]$ git push origin master
+error: unable to read askpass response from '/usr/libexec/openssh/gnome-ssh-askpass'
+Username for 'https://github.com': ramirezluisalberto@hotmail.com
+error: unable to read askpass response from '/usr/libexec/openssh/gnome-ssh-askpass'
+Password for 'https://ramirezluisalberto@hotmail.com@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/ramirezla/henrry.git/'
+[ramirezla@LXMOBILELARG pruebaHenrry]$ git push origin
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+[ramirezla@LXMOBILELARG pruebaHenrry]$ git remote add origin git@github.com:ramirezla/henrry.git
+fatal: remote origin already exists.
+[ramirezla@LXMOBILELARG pruebaHenrry]$ git remote --help
+[ramirezla@LXMOBILELARG pruebaHenrry]$ git remote remove remote
+fatal: No such remote: remote
+[ramirezla@LXMOBILELARG pruebaHenrry]$ git remote --help
+[ramirezla@LXMOBILELARG pruebaHenrry]$ 
+[ramirezla@LXMOBILELARG pruebaHenrry]$ 
+[ramirezla@LXMOBILELARG pruebaHenrry]$ cd ..
+[ramirezla@LXMOBILELARG ~]$ \rm -r pruebaHenrry/
+rm: remove write-protected regular file ‘pruebaHenrry/henrry/.git/objects/e4/3bf605ab96b80ad0b20feffda1a1346f218336’? y
+rm: remove write-protected regular file ‘pruebaHenrry/henrry/.git/objects/8b/d0224e6f2a0379497ee25aae9aed49e184d21e’? y
+rm: remove write-protected regular file ‘pruebaHenrry/henrry/.git/objects/ca/18b2fc2b9b25c414a755879606db671dd7729a’? y
+rm: remove write-protected regular file ‘pruebaHenrry/.git/objects/86/97069710f92e917c57ac0d2ac78182e0267259’? y
+rm: remove write-protected regular file ‘pruebaHenrry/.git/objects/ad/2efce8b49b3da1cc8fd6dc84d9cce6d6090027’? y
+rm: remove write-protected regular file ‘pruebaHenrry/.git/objects/ad/f47ac281f831be6692612f2f9186d05bdbf23d’? y
+[ramirezla@LXMOBILELARG ~]$ 
+[ramirezla@LXMOBILELARG ~]$ 
+[ramirezla@LXMOBILELARG ~]$ 
+[ramirezla@LXMOBILELARG ~]$ mkdir pruebaGitHub
+[ramirezla@LXMOBILELARG ~]$ cd pruebaGitHub/
+[ramirezla@LXMOBILELARG pruebaGitHub]$ echo "ramirezla@hotmail.com" > email.README
+[ramirezla@LXMOBILELARG pruebaGitHub]$ git init
+Initialized empty Git repository in /home/ramirezla/pruebaGitHub/.git/
+[ramirezla@LXMOBILELARG pruebaGitHub]$ git add .
+[ramirezla@LXMOBILELARG pruebaGitHub]$ git remote add Henrry git@github.com:ramirezla/henrry.git
+[ramirezla@LXMOBILELARG pruebaGitHub]$ git remote -v
+Henrry	git@github.com:ramirezla/henrry.git (fetch)
+Henrry	git@github.com:ramirezla/henrry.git (push)
+[ramirezla@LXMOBILELARG pruebaGitHub]$ git commit -m "primera prueba"
+[master (root-commit) 2788df7] primera prueba
+ 1 file changed, 1 insertion(+)
+ create mode 100644 email.README
+[ramirezla@LXMOBILELARG pruebaGitHub]$ git push origin main
+error: src refspec main does not match any.
+error: failed to push some refs to 'origin'
+[ramirezla@LXMOBILELARG pruebaGitHub]$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+[ramirezla@LXMOBILELARG pruebaGitHub]$ git remote add henrry git@github.com:ramirezla/henrry.git
+[ramirezla@LXMOBILELARG pruebaGitHub]$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+[ramirezla@LXMOBILELARG pruebaGitHub]$ ls -las
+total 16
+ 0 drwxrwxr-x    3 ramirezla ramirezla   38 Jan 28 01:45 .
+12 drwx------. 111 ramirezla ramirezla 8192 Jan 28 01:44 ..
+ 4 -rw-rw-r--    1 ramirezla ramirezla   22 Jan 28 01:45 email.README
+ 0 drwxrwxr-x    8 ramirezla ramirezla  166 Jan 28 01:48 .git
+[ramirezla@LXMOBILELARG pruebaGitHub]$ git config --list
+user.email==
+user.name=Luis A, Ramirez G.
+user.name==
+core.autocrlf=input
+cola.spellcheck=false
+cola.startupmode=folder
+credential.helper=store --file ~/.my-credentials
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.Henrry.url=git@github.com:ramirezla/henrry.git
+remote.Henrry.fetch=+refs/heads/*:refs/remotes/Henrry/*
+remote.henrry.url=git@github.com:ramirezla/henrry.git
+remote.henrry.fetch=+refs/heads/*:refs/remotes/henrry/*
+[ramirezla@LXMOBILELARG pruebaGitHub]$ git remote add origin git@github.com:ramirezla/henrry.git
+[ramirezla@LXMOBILELARG pruebaGitHub]$ git push origin master
+Warning: Permanently added the ECDSA host key for IP address '140.82.113.3' to the list of known hosts.
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+[ramirezla@LXMOBILELARG pruebaGitHub]$ cd
+[ramirezla@LXMOBILELARG ~]$ cd cd ~/.ssh
+bash: cd: cd: No such file or directory
+[ramirezla@LXMOBILELARG ~]$ cd .ssh
+[ramirezla@LXMOBILELARG .ssh]$ 
+[ramirezla@LXMOBILELARG .ssh]$ 
+[ramirezla@LXMOBILELARG .ssh]$ more
+Usage: more [options] file...
+
+Options:
+  -d        display help instead of ring bell
+  -f        count logical, rather than screen lines
+  -l        suppress pause after form feed
+  -p        do not scroll, clean screen and display text
+  -c        do not scroll, display text and clean line ends
+  -u        suppress underlining
+  -s        squeeze multiple blank lines into one
+  -NUM      specify the number of lines per screenful
+  +NUM      display file beginning from line number NUM
+  +/STRING  display file beginning from search string match
+  -V        output version information and exit
+[ramirezla@LXMOBILELARG .ssh]$ ls
+codecommit_rsa  codecommit_rsa.pub  config  id_rsa  id_rsa.pub  known_hosts
+[ramirezla@LXMOBILELARG .ssh]$ ls -las
+total 36
+ 0 drwx------.   2 ramirezla ramirezla  119 Jan 27 21:40 .
+12 drwx------. 111 ramirezla ramirezla 8192 Jan 28 01:44 ..
+ 4 -rw-------    1 ramirezla ramirezla 1675 Mar 31  2021 codecommit_rsa
+ 4 -rw-r--r--    1 ramirezla ramirezla  404 Mar 31  2021 codecommit_rsa.pub
+ 4 -r--------    1 ramirezla ramirezla  101 Mar 31  2021 config
+ 4 -rw-------    1 ramirezla ramirezla 1679 Jan 27 21:40 id_rsa
+ 4 -rw-r--r--    1 ramirezla ramirezla  412 Jan 27 21:40 id_rsa.pub
+ 4 -rw-r--r--    1 ramirezla ramirezla 3909 Jan 28 01:50 known_hosts
+[ramirezla@LXMOBILELARG .ssh]$ more id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyhNBJkyHTpkputwmQgByiafeFXtkoIJWvDUo9eCVqNCCS3QnJAKCFqQa7BXKl1qney
+S7FZGEFhjoqo8mb3ybz3RO/DJ3CGIz6PUCP/qyxHsDLntMNGH3Gpi3EQnboztMoIw3uTVh+35sNrBRc9VSG4HitljtYFlZU3i15PokVt/
+HAsSuZLuZDhQvpzmPVEupn1dCD2D0YggIFz7nz42pbgtOGYCKkiFAd1RrVTCf8TgA/iEz9dErOos32kJMeshWzDu7gQyJuVhguude1NlU
+cHR2wMwkbRbk4eZ+C1RAPWu37wUG83AAlxNx/HKL7CKQtOr76b87yySoE6Fa4jcZx ramirezluisalberto@hotmail.com
+[ramirezla@LXMOBILELARG .ssh]$ cd ..
+[ramirezla@LXMOBILELARG ~]$ cd pruebaGitHub/
+[ramirezla@LXMOBILELARG pruebaGitHub]$ git push origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 216 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/ramirezla/henrry/pull/new/master
+remote: 
+To github.com:ramirezla/henrry.git
+ * [new branch]      master -> master
+[ramirezla@LXMOBILELARG pruebaGitHub]$ 
+
